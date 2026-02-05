@@ -32,7 +32,6 @@ export interface DiseaseAnalysisResult {
   supplements?: SupplementInfo[];
 }
 
-// Health check for backend availability
 export const checkBackendAvailability = async (): Promise<boolean> => {
   try {
     const response = await fetch(`${API_BASE_URL}/health`, {

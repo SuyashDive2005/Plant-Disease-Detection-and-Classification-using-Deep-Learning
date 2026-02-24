@@ -1,7 +1,7 @@
 # 🌿 PlantCare - Plant Disease Detection System
 
 A full-stack web application for detecting and classifying plant diseases using deep learning. The system uses Convolutional Neural Networks (CNN) to identify diseases in pepper, potato, and tomato plants, providing disease information and treatment recommendations.
----
+- - - 
 <a name="overview"></a>
 ## 🎯 Overview
 

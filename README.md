@@ -1,21 +1,8 @@
 # 🌿 PlantCare - Plant Disease Detection System
 
 A full-stack web application for detecting and classifying plant diseases using deep learning. The system uses Convolutional Neural Networks (CNN) to identify diseases in pepper, potato, and tomato plants, providing disease information and treatment recommendations.
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model Information](#model-information)
-- [Dataset](#dataset)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
-
+---
+<a name="overview"></a>
 ## 🎯 Overview
 
 PlantCare is an AI-powered plant disease detection system that helps farmers and gardeners identify plant diseases quickly and accurately. The system can detect 15 different classes of plant diseases across three crop types: peppers, potatoes, and tomatoes.
@@ -26,6 +13,9 @@ PlantCare is an AI-powered plant disease detection system that helps farmers and
 - **Potato**: Early blight, Late blight, Healthy
 - **Tomato**: Target Spot, Tomato mosaic virus, Yellow Leaf Curl Virus, Bacterial spot, Early blight, Late blight, Leaf Mold, Septoria leaf spot, Spider mites, Healthy
 
+---
+
+<a name="features"></a>
 ## ✨ Features
 
 - 📸 **Image Upload & Camera Capture**: Upload plant images or capture directly from camera
@@ -36,10 +26,12 @@ PlantCare is an AI-powered plant disease detection system that helps farmers and
 - 📄 **PDF Reports**: Generate downloadable reports of disease analysis
 - 🎨 **Modern UI**: Responsive design built with React and Tailwind CSS
 
+---
+
+<a name="tech-stack"></a>
 ## 🛠️ Tech Stack
 
 ### Frontend
-
 - **Framework**: React 19 + TypeScript
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS 4.1
@@ -49,7 +41,6 @@ PlantCare is an AI-powered plant disease detection system that helps farmers and
 - **PDF Generation**: jsPDF
 
 ### Backend
-
 - **Framework**: Flask 3.0
 - **Deep Learning**: TensorFlow 2.15
 - **Image Processing**: Pillow, OpenCV
@@ -57,63 +48,68 @@ PlantCare is an AI-powered plant disease detection system that helps farmers and
 - **CORS**: Flask-CORS
 
 ### Machine Learning
-
 - **Model Architecture**: CNN (Convolutional Neural Network)
 - **Image Size**: 128x128 pixels
 - **Augmentation**: ImageDataGenerator
 - **Additional**: GAN (Generative Adversarial Network) for data augmentation
 
+---
+
+<a name="project-structure"></a>
 ## 📁 Project Structure
 
 ```
 PLantCare/
 ├── Backend/
-│   ├── app.py                      # Flask API server
-│   ├── CNN.py                      # CNN model training script
-│   ├── check_model_input.py        # Model input validation
-│   ├── evaluate_model.py           # Model evaluation script
-│   ├── requirements.txt            # Python dependencies
-│   ├── disease_info.csv            # Disease information database
-│   ├── supplement_info.csv         # Treatment supplement data
+│   ├── app.py                # Flask API server
+│   ├── CNN.py                # CNN model training script
+│   ├── check_model_input.py  # Model input validation
+│   ├── evaluate_model.py     # Model evaluation script
+│   ├── requirements.txt      # Python dependencies
+│   ├── disease_info.csv      # Disease information database
+│   ├── supplement_info.csv   # Treatment supplement data
 │   ├── static/
-│   │   └── model.h5                # Trained CNN model
-│   ├── PlantVillage/               # Training dataset
+│   │   └── model.h5          # Trained CNN model
+│   ├── PlantVillage/         # Training dataset
 │   │   ├── Pepper__bell___Bacterial_spot/
 │   │   ├── Pepper__bell___healthy/
 │   │   ├── Potato___Early_blight/
 │   │   ├── Tomato_healthy/
-│   │   └── ...                     # Other disease classes
+│   │   └── ...               # Other disease classes
 │   └── Tomato-Plant-Disease-Classification-using-CNN-with-GAN-master/
-│       ├── CGAN_code.py            # Conditional GAN implementation
-│       ├── DCGAN_code.py           # Deep Convolutional GAN
-│       ├── CNN_model.py            # Alternative CNN model
-│       └── dataset_handling.py     # Dataset utilities
+│       ├── CGAN_code.py      # Conditional GAN implementation
+│       ├── DCGAN_code.py     # Deep Convolutional GAN
+│       ├── CNN_model.py      # Alternative CNN model
+│       └── dataset_handling.py # Dataset utilities
 │
 └── Frontend/
     ├── src/
-    │   ├── App.tsx                 # Main application component
-    │   ├── main.tsx                # Application entry point
+    │   ├── App.tsx            # Main application component
+    │   ├── main.tsx           # Application entry point
     │   ├── components/
-    │   │   ├── navbar.tsx          # Navigation bar
-    │   │   ├── footer.tsx          # Footer component
-    │   │   ├── camera-capture.tsx  # Camera capture component
-    │   │   └── report.tsx          # PDF report generator
+    │   │   ├── navbar.tsx     # Navigation bar
+    │   │   ├── footer.tsx     # Footer component
+    │   │   ├── camera-capture.tsx # Camera capture component
+    │   │   └── report.tsx     # PDF report generator
     │   ├── pages/
-    │   │   ├── home.tsx            # Landing page
-    │   │   ├── detect-disease.tsx  # Disease detection page
-    │   │   ├── plant-database.tsx  # Plant information database
-    │   │   └── analytics.tsx       # Analytics dashboard
+    │   │   ├── home.tsx       # Landing page
+    │   │   ├── detect-disease.tsx # Disease detection page
+    │   │   ├── plant-database.tsx # Plant information database
+    │   │   └── analytics.tsx  # Analytics dashboard
     │   └── services/
     │       └── disease-services.ts # API service layer
     ├── public/
-    │   ├── images/                 # Static images
-    │   └── logo/                   # Logo assets
-    ├── package.json                # Node dependencies
-    ├── vite.config.ts              # Vite configuration
-    ├── tailwind.config.js          # Tailwind CSS configuration
-    └── tsconfig.json               # TypeScript configuration
+    │   ├── images/            # Static images
+    │   └── logo/              # Logo assets
+    ├── package.json           # Node dependencies
+    ├── vite.config.ts         # Vite configuration
+    ├── tailwind.config.js     # Tailwind CSS configuration
+    └── tsconfig.json          # TypeScript configuration
 ```
 
+---
+
+<a name="installation"></a>
 ## 🚀 Installation
 
 ### Prerequisites
@@ -126,32 +122,26 @@ PLantCare/
 ### Backend Setup
 
 1. Clone the repository:
-
 ```bash
 git clone https://github.com/SuyashDive2005/Plant-Disease-Detection-and-Classification-using-Deep-Learning.git
 cd PLantCare
 ```
 
 2. Navigate to the Backend directory:
-
 ```bash
 cd Backend
 ```
 
 3. Create a virtual environment (recommended):
-
 ```bash
 python -m venv venv
-
 # On Windows
 venv\Scripts\activate
-
 # On macOS/Linux
 source venv/bin/activate
 ```
 
 4. Install Python dependencies:
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -161,23 +151,23 @@ pip install -r requirements.txt
 ### Frontend Setup
 
 1. Navigate to the Frontend directory:
-
 ```bash
 cd Frontend
 ```
 
 2. Install Node dependencies:
-
 ```bash
 npm install
 ```
 
+---
+
+<a name="usage"></a>
 ## 💻 Usage
 
 ### Running the Backend
 
 1. Navigate to the Backend directory:
-
 ```bash
 cd Backend
 ```
@@ -185,7 +175,6 @@ cd Backend
 2. Activate your virtual environment (if using one)
 
 3. Start the Flask server:
-
 ```bash
 python app.py
 ```
@@ -195,13 +184,11 @@ The backend API will start on `http://localhost:5000`
 ### Running the Frontend
 
 1. Open a new terminal and navigate to the Frontend directory:
-
 ```bash
 cd Frontend
 ```
 
 2. Start the development server:
-
 ```bash
 npm run dev
 ```
@@ -213,7 +200,6 @@ The frontend will start on `http://localhost:5173` (or another port if 5173 is b
 ### Building for Production
 
 **Frontend:**
-
 ```bash
 cd Frontend
 npm run build
@@ -221,6 +207,9 @@ npm run build
 
 The production-ready files will be in the `dist` folder.
 
+---
+
+<a name="model-information"></a>
 ## 🧠 Model Information
 
 ### CNN Architecture
@@ -253,6 +242,9 @@ The project includes GAN (Generative Adversarial Network) implementations for da
 - **CGAN**: Conditional GAN for generating class-specific images
 - **DCGAN**: Deep Convolutional GAN for enhanced image generation
 
+---
+
+<a name="dataset"></a>
 ## 📊 Dataset
 
 The model is trained on the **PlantVillage Dataset**, which contains images of healthy and diseased plant leaves across multiple crop species.
@@ -264,10 +256,12 @@ The model is trained on the **PlantVillage Dataset**, which contains images of h
 - **Image Resolution**: 128x128 pixels
 - **Training/Validation Split**: 80/20
 
+---
+
+<a name="api-documentation"></a>
 ## 📡 API Documentation
 
 ### Base URL
-
 ```
 http://localhost:5000/api
 ```
@@ -279,14 +273,12 @@ http://localhost:5000/api
 Detect plant disease from an uploaded image.
 
 **Request:**
-
 - Method: `POST`
 - Content-Type: `multipart/form-data`
 - Body:
   - `image`: Image file (JPG, PNG)
 
 **Response:**
-
 ```json
 {
   "class": "Tomato_Early_blight",
@@ -305,6 +297,9 @@ Detect plant disease from an uploaded image.
 }
 ```
 
+---
+
+<a name="contributing"></a>
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -315,6 +310,8 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
 
+---
+
 ## 📝 Development Notes
 
 ### Training a New Model
@@ -323,18 +320,15 @@ To train a new model from scratch:
 
 1. Ensure your dataset is in the `Backend/PlantVillage/` directory
 2. Run the training script:
-
 ```bash
 cd Backend
 python CNN.py
 ```
-
 3. The trained model will be saved to `static/model.h5`
 
 ### Model Evaluation
 
 To evaluate the model performance:
-
 ```bash
 cd Backend
 python evaluate_model.py
@@ -343,13 +337,21 @@ python evaluate_model.py
 ### Using GANs for Data Augmentation
 
 To generate additional training images:
-
 ```bash
 cd Backend/Tomato-Plant-Disease-Classification-using-CNN-with-GAN-master
-python CGAN_code.py  # For Conditional GAN
+python CGAN_code.py   # For Conditional GAN
 # or
 python DCGAN_code.py  # For Deep Convolutional GAN
 ```
+
+---
+
+<a name="license"></a>
+## 📄 License
+
+This project is open source. Please check the repository for license details.
+
+---
 
 ## 👥 Authors
 
@@ -368,4 +370,4 @@ For questions or support, please open an issue on GitHub or contact the reposito
 
 ---
 
-Made with ❤️ for healthier plants and sustainable agriculture
+*Made with ❤️ for healthier plants and sustainable agriculture*

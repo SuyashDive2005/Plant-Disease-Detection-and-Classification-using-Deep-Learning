@@ -351,10 +351,6 @@ python CGAN_code.py  # For Conditional GAN
 python DCGAN_code.py  # For Deep Convolutional GAN
 ```
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 👥 Authors
 
 - **Suyash Dive** - [@SuyashDive2005](https://github.com/SuyashDive2005)
